@@ -16,7 +16,7 @@ document.querySelectorAll(".open-modal").forEach(el =>{
     el.addEventListener("click", e => {
         e.preventDefault();
         if(typeof modal == "undefined"){
-            import(/*webpackTrunkName:"modal"*/'./modules/modal').then(x=>{
+            import(/*webpackTrunkName:"modal"*/'./modules/Modal').then(x=>{
                 modal = new x.default();
                 setTimeout(()=>modal.openTheModal(),20);
             }).catch(()=> console.log("there was a problem"));
